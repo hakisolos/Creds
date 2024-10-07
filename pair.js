@@ -54,7 +54,20 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 let session = await Pair_Code_By_Maher_Zubair.sendMessage(Pair_Code_By_Maher_Zubair.user.id, { document: data, fileName: "creds.json" })
 
-               let SIGMA_MD_TEXT = `_Alya Bot pair Successful._`
+               let SIGMA_MD_TEXT = `
+          _*PAIR Successful 🌟*_
+put the above ID in the sessID variable when deploying .
+Use this Session ID for all bots by STAR KING.
+╔═════◇
+║       『••• STAR KING•••』
+║ *Channel:* _https://whatsapp.com/channel/0029VamU5H1DuMRYiHQ9vI09_
+║ *Main GC:* _https://chat.whatsapp.com/DC38hUUVVaa1vp573QBYBF_
+║ *Github:* _https://github.com/STAR-KING0_
+║ *Owner:* _https://wa.me/2348100835767_
+║ *Note :*_Do not provide your SESSION_ID to_
+║ _anyone otherwise that can access your WA messages_
+║ _*Follow Me and Star my repo for more 🫡.*_
+╚════════════════════════╝`
  await Pair_Code_By_Maher_Zubair.sendMessage(Pair_Code_By_Maher_Zubair.user.id,{text:SIGMA_MD_TEXT},{quoted:session})
  
 
