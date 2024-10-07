@@ -52,15 +52,9 @@ router.get('/', async (req, res) => {
                 if (connection == "open") {
                 await delay(5000);
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-                await delay(800);
-               let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Maher_Zubair.sendMessage(Pair_Code_By_Maher_Zubair.user.id, { text: 'SIGMA-MD;;;' + b64data });
+                let session = await Pair_Code_By_Maher_Zubair.sendMessage(Pair_Code_By_Maher_Zubair.user.id, { document: data, fileName: "creds.json" })
 
-               let SIGMA_MD_TEXT = `
-*_Pair Code By Maher Zubair_*
-*_Made With 🤍_*
-
-_Don't Forget To Give Star To My Repo_`
+               let SIGMA_MD_TEXT = `_Alya Bot pair Successful._`
  await Pair_Code_By_Maher_Zubair.sendMessage(Pair_Code_By_Maher_Zubair.user.id,{text:SIGMA_MD_TEXT},{quoted:session})
  
 
